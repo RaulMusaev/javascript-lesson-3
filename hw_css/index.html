@@ -1,0 +1,42 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-container">
+      <h2 class="search-title">Search</h2>
+      <label for="searchTitle" class="search-label">Title:</label>
+      <input type="text" id="searchTitle" class="search-input" placeholder="Enter movie title">
+      
+      <label for="searchType" class="search-label">Type:</label>
+      <select id="searchType" class="search-select">
+        <option value="movie">Movie</option>
+        <option value="series">Series</option>
+        <option value="episode">Episode</option>
+      </select>
+      
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+    
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+    </div>
+    
+    <div id="movies" class="movies-container"></div>
+    
+    <button id="moreButton" class="more-button" style="display: none;" onclick="handleMore()">More</button>
+    
+    <input type="hidden" id="currentPage" value="1">
+    
+    <div id="modal" class="modal" style="display: none;">
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
